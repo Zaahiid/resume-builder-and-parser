@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { cx } from "../lib/cx";
 import Link from "next/link";
 import { text } from "stream/consumers";
+import Image from "next/image";
 
 export const TopNavbar = () => {
   const pathname = usePathname();
@@ -19,7 +20,17 @@ export const TopNavbar = () => {
     >
       <div className="flex h-10 w-full items-center justify-between">
         <Link href="/">
-          <h2 className="text-xl text-primary">Resume Builder and Parser</h2>
+          <div className="flex items-center justify-center gap-1">
+            <Image
+              src={"assets/heart.svg"}
+              height={16}
+              width={16}
+              alt="logo"
+              className="h-8 w-full"
+              priority
+            />
+            <h1 className="text-xl whitespace-nowrap text-primary">Resume Builder & Parser</h1>
+          </div>
         </Link>
         <nav
           aria-label="Site Nav Bar"
