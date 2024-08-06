@@ -12,5 +12,8 @@ export const parseResumeFromPdf = async (fileUrl: string) => {
   //step 3. Group lines into sections
   const sections = groupLinesIntoSections(lines);
 
+  //step 4. Extract resume from sections
+  // const resume = extractResumeFromSections(sections);
+
   return;
 };
