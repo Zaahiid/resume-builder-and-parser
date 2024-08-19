@@ -1,3 +1,4 @@
+import { extractResumeFromSections } from "./extract-resume-from-sections";
 import { groupLinesIntoSections } from "./group-lines-into-sections";
 import { groupTextItemsIntoLines } from "./group-text-items-into-lines";
 import { readPdf } from "./read-pdf";
@@ -13,7 +14,7 @@ export const parseResumeFromPdf = async (fileUrl: string) => {
   const sections = groupLinesIntoSections(lines);
 
   //step 4. Extract resume from sections
-  // const resume = extractResumeFromSections(sections);
+  const resume = extractResumeFromSections(sections);
 
-  return;
+  return resume;
 };
